@@ -71,3 +71,7 @@ Cada estado do semáforo possui representações sonoras e visuais específicas:
 - A interface WiFi utiliza polling contínuo através da tarefa dedicada `wifi_task` para garantir responsividade
 
 O sistema demonstra a aplicação prática de um dispositivo IoT integrado com RTOS, permitindo operação autônoma com capacidade de monitoramento e controle remoto, características essenciais para sistemas de sinalização inteligentes em ambientes urbanos conectados.
+
+## link do video
+
+https://www.youtube.com/watch?v=zqmG8l1MBsQ&ab_channel=murielcosta
