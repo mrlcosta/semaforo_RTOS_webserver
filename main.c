@@ -333,11 +333,12 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
              "<h1>Semaforo IOT com RTOS</h1>\n"
              "<form action=\"./modo\"><button>Alternar modo</button></form>\n"
              "<form action=\"./buzzer\"><button>Alerta sonoro</button></form>\n"
-             "<p class=\"texto\">Modo semaforo: %i</p>\n"
-             "<p class=\"texto\">Alerta sonoro: %i</p>\n"
+             "<p class=\"texto\">Modo semaforo: %s</p>\n"
+             "<p class=\"texto\">Alerta sonoro: %s</p>\n"
              "</body>\n"
              "</html>\n",
-             modo_diurno, alerta_sonoro);
+             modo_diurno ? "Diurno" : "Noturno", 
+             alerta_sonoro ? "Ativado" : "Desativado");
 
     tcp_write(tpcb, html, strlen(html), TCP_WRITE_FLAG_COPY);
     tcp_output(tpcb);
